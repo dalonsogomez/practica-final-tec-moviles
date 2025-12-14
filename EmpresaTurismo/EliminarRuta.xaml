@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpresaTurismo.EliminarRuta"
+             Title="Eliminar Ruta">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        
+        <Label 
+            Text="Eliminar una Ruta"
+            FontSize="20"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Entry 
+            x:Name="IdEntry"
+            Placeholder="Id de la ruta a eliminar (ej. R001)"
+            Keyboard="Text" />
+
+        <Button 
+            Text="Buscar ruta"
+            BackgroundColor="#FF015308"
+            TextColor="#FFFF7300"
+            Clicked="BuscarRuta" />
+
+        <Frame x:Name="InfoFrame" 
+               IsVisible="False"
+               BorderColor="LightGray"
+               Padding="10"
+               CornerRadius="5">
+            <VerticalStackLayout Spacing="5">
+                <Label x:Name="InfoRutaLabel"
+                       FontAttributes="Bold"
+                       FontSize="16" />
+                <Label x:Name="DetallesRutaLabel"
+                       FontSize="14" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button 
+            x:Name="EliminarButton"
+            Text="Eliminar ruta"
+            BackgroundColor="#FFCC0000"
+            TextColor="White"
+            IsVisible="False"
+            Clicked="EliminarRutaClick" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

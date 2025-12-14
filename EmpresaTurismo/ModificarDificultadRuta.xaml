@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpresaTurismo.ModificarDificultadRuta"
+             Title="ModificarDificultadRuta">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Modificar Dificultad de una Ruta"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+      
+        <Entry x:Name="IdEntry"
+               Placeholder="Id de la ruta (ej. R001)"
+               Keyboard="Text" />
+
+        <Label Text="O bien, buscar por nombre y provincia" 
+               FontAttributes="Italic" />
+
+       
+        <Entry x:Name="NombreEntry"
+               Placeholder="Nombre de la ruta"
+               Keyboard="Text" />
+
+        <Entry x:Name="ProvinciaEntry"
+               Placeholder="Provincia"
+               Keyboard="Text" />
+
+      
+        <Picker x:Name="DificultadPicker"
+                Title="Nueva dificultad">
+            <Picker.Items>
+                <x:String>FACIL</x:String>
+                <x:String>MEDIA</x:String>
+                <x:String>DIFICIL</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Modificar dificultad"
+                BackgroundColor="#FF015308"
+                TextColor="#FFFA7006"
+                Clicked="ModificarDificultad" />
+    </VerticalStackLayout>
+
+</ContentPage>

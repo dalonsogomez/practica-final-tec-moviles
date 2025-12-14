@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpresaTurismo.DetalleRuta"
+             Title="Detalle de las Rutas">
+   
+   <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="{Binding Nombre}"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Grid ColumnDefinitions="Auto,*"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnSpacing="10"
+                  RowSpacing="4">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Id:" FontAttributes="Bold" />
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Id}" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Provincia:" FontAttributes="Bold" />
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Provincia}" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Dificultad:" FontAttributes="Bold" />
+                <Label Grid.Row="2" Grid.Column="1" Text="{Binding DificultadRuta}" />
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Distancia (km):" FontAttributes="Bold" />
+                <Label Grid.Row="3" Grid.Column="1" Text="{Binding DistanciaKm}" />
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Desnivel (m):" FontAttributes="Bold" />
+                <Label Grid.Row="4" Grid.Column="1" Text="{Binding Desnivel}" />
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Circular:" FontAttributes="Bold" />
+                <Label Grid.Row="5" Grid.Column="1" Text="{Binding Circular}" />
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Fecha apertura:" FontAttributes="Bold" />
+                <Label Grid.Row="6" Grid.Column="1" 
+                       Text="{Binding FechaApertura}" />
+            </Grid>
+
+ 
+            <Label Text="Etiquetas:"
+                   FontAttributes="Bold" />
+
+            <Label x:Name="EtiquetasLabel"
+                   LineBreakMode="WordWrap" />
+
+            <Button Text="Volver"
+                    BackgroundColor="#FF015308"
+                    TextColor="#FFFA7006"
+                    Clicked="Volver" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

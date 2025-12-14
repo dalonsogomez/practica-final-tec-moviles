@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpresaTurismo.MostrarRutasEstadisticas"
+             Title="Estadísticas de Rutas">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            
+            <Label 
+                Text="Estadísticas de las Rutas"
+                FontSize="22"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Actualizar estadísticas"
+                BackgroundColor="#FF015308"
+                TextColor="#FFFF9500"
+                Clicked="ActualizarEstadisticas" />
+
+            <!-- Total de rutas -->
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="8">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Total de rutas" FontAttributes="Bold" FontSize="16" />
+                    <Label x:Name="TotalRutasLabel" FontSize="24" TextColor="#FF015308" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Distancia media -->
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="8">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Distancia media" FontAttributes="Bold" FontSize="16" />
+                    <Label x:Name="DistanciaMediaLabel" FontSize="24" TextColor="#FF015308" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Ruta más larga -->
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="8">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Ruta más larga" FontAttributes="Bold" FontSize="16" />
+                    <Label x:Name="RutaMasLargaNombreLabel" FontSize="18" />
+                    <Label x:Name="RutaMasLargaKmLabel" FontSize="14" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Ruta más corta -->
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="8">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Ruta más corta" FontAttributes="Bold" FontSize="16" />
+                    <Label x:Name="RutaMasCortaNombreLabel" FontSize="18" />
+                    <Label x:Name="RutaMasCortaKmLabel" FontSize="14" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Mayor desnivel -->
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="8">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Mayor desnivel positivo" FontAttributes="Bold" FontSize="16" />
+                    <Label x:Name="MayorDesnivelNombreLabel" FontSize="18" />
+                    <Label x:Name="MayorDesnivelMetrosLabel" FontSize="14" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Menor desnivel -->
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="8">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Menor desnivel positivo" FontAttributes="Bold" FontSize="16" />
+                    <Label x:Name="MenorDesnivelNombreLabel" FontSize="18" />
+                    <Label x:Name="MenorDesnivelMetrosLabel" FontSize="14" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

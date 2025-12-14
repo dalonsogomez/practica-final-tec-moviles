@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EmpresaTurismo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EmpresaTurismo"
+    Title="EmpresaTurismo">
+
+    <TabBar>        
+        <Tab Route="MainPage" Icon="inicio.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+
+        <Tab Route="CrearRuta" Icon="crear.png">
+            <ShellContent ContentTemplate="{DataTemplate local:CrearRuta}" />
+        </Tab>
+
+        <Tab Route="VerRutas" Icon="mostrar.png">
+            <ShellContent Title="Ver Rutas" 
+                          ContentTemplate="{DataTemplate local:MostrarRutas}" 
+                          Route="MostrarRutas"/>
+
+            <ShellContent Title="Ver Rutas Provincia" 
+                          ContentTemplate="{DataTemplate local:MostrarRutasProvincias}" 
+                          Route="MostrarRutasProvincia"/>
+
+            <ShellContent Title="Ver Estadisticas Rutas" 
+                          ContentTemplate="{DataTemplate local:MostrarRutasEstadisticas}" 
+                          Route="MostrarRutasEstadisticas"/>
+
+            <ShellContent Title="Ver Rutas Etiquetas" 
+                          ContentTemplate="{DataTemplate local:MostrarRutasEtiquetas}" 
+                          Route="MostrarRutasEtiquetas"/>
+        </Tab>
+
+        <Tab Route="ModificarRuta" Icon="modificar.png">
+             <ShellContent Title="Añadir o Eliminar" 
+                          ContentTemplate="{DataTemplate local:AnadirEliminarEtiquetas}" 
+                          Route="ModificarRuta"/>
+
+             <ShellContent Title="Modificar Dificultad" 
+                          ContentTemplate="{DataTemplate local:ModificarDificultadRuta}" 
+                          Route="ModificarDificultadRuta"/>
+        </Tab>
+
+        <Tab Route="EliminarRuta" Icon="eliminar.png">
+            <ShellContent ContentTemplate="{DataTemplate local:EliminarRuta}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

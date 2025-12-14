@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpresaTurismo.AnadirEliminarEtiquetas"
+             Title="Anadir o Eliminar Etiquetas">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label 
+            Text="Editar etiquetas de una ruta"
+            FontSize="20"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+    
+        <Entry 
+            x:Name="IdEntry"
+            Placeholder="Id de la ruta (ej. R001)"
+            Keyboard="Text" />
+
+        <Button 
+            Text="Buscar ruta"
+            BackgroundColor="#FF015308"
+             TextColor="#FFFF7300"
+            Clicked="BuscarRuta" />
+
+        
+        <Label 
+            x:Name="InfoRutaLabel"
+            Text="Ruta no seleccionada"
+            FontAttributes="Italic" />
+
+       
+        <Label Text="Etiquetas actuales:" />
+        <ListView x:Name="EtiquetasListView"
+                  HeightRequest="150" />
+
+ 
+        <Entry 
+            x:Name="NuevasEtiquetasEntry"
+            Placeholder="Nuevas etiquetas (separadas por comas)"
+            Keyboard="Text" />
+
+        <Button 
+            Text="Añadir etiquetas"
+            BackgroundColor="#FF015308"
+             TextColor="#FFFF7300"
+            Clicked="AñadirEtiquetas" />
+
+      
+        <Entry 
+            x:Name="EtiquetaEliminarEntry"
+            Placeholder="Etiqueta a eliminar"
+            Keyboard="Text" />
+
+        <Button 
+            Text="Eliminar etiqueta"
+            BackgroundColor="#FF015308"
+            TextColor="#FFFF7300"
+            Clicked="EliminarEtiqueta" />
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpresaTurismo.MostrarRutasEtiquetas"
+             Title="Mostrar Rutas Etiquetas">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Rutas con una Etiqueta Determinada"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="EtiquetaEntry"
+               Placeholder="Etiqueta (ej. Bosque, Río, Familiar...)"
+               Keyboard="Text" />
+
+        <Button Text="Buscar rutas"
+                BackgroundColor="Gray"
+                TextColor="Yellow"
+                Clicked="BuscarPorEtiqueta" />
+
+        <Label x:Name="ResumenLabel"
+               Text="No se ha realizado ninguna búsqueda."
+               FontAttributes="Italic"
+               HorizontalOptions="Center" />
+
+        <ListView x:Name="RutasListView"
+                  HeightRequest="300">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout Padding="5" Spacing="10">
+                            <Label Text="{Binding Nombre}"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center" />
+                                
+                            <Label Text="{Binding Provincia}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
